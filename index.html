@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Encoding karakter -->
+  <meta charset="utf-8">
+
+  <!-- Agar tampilan responsif di HP -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Judul tab browser -->
+  <title>My Portfolio | Silvia Andita Ramadhani</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+  >
+
+  <!-- CSS -->
+  <style>
+
+    /* =========================
+       TAMPILAN DASAR
+    ========================= */
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f5ff;
+      color: #333;
+    }
+
+    section {
+      scroll-margin-top: 80px;
+    }
+
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .custom-navbar {
+      background: linear-gradient(135deg, #6f42c1, #8e5de7);
+      padding: 12px 0;
+      box-shadow: 0 4px 15px rgba(91, 53, 145, 0.25);
+    }
+
+    .custom-navbar .navbar-brand {
+      color: white;
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    .custom-navbar .nav-link {
+      color: rgba(255, 255, 255, 0.9);
+      margin-left: 8px;
+      padding: 8px 12px !important;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .custom-navbar .nav-link:hover {
+      color: white;
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .custom-navbar .nav-link.active {
+      color: white;
+    }
+
+
+    /* =========================
+       HOME / JUMBOTRON
+    ========================= */
+
+    .jumbotron {
+      padding-top: 150px;
+      padding-bottom: 100px;
+      background: linear-gradient(
+        135deg,
+        #eee5ff,
+        #d8c5ff
+      );
+    }
+
+    .jumbotron img {
+      border: 6px solid white;
+      box-shadow: 0 8px 25px rgba(111, 66, 193, 0.25);
+    }
+
+    .jumbotron h1 {
+      color: #5b2c91;
+      font-weight: 700;
+      margin-top: 20px;
+    }
+
+    .jumbotron .lead {
+      color: #6f42c1;
+      font-weight: 600;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    #about {
+      background-color: white;
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    #about h2 {
+      color: #5b2c91;
+      font-weight: 700;
+    }
+
+    #about p {
+      line-height: 1.8;
+      color: #555;
+    }
+
+
+    /* =========================
+       PROJECT / HAL YANG DISUKAI
+    ========================= */
+
+    #Project {
+      background-color: #f8f5ff;
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    #Project h2 {
+      color: #5b2c91;
+      font-weight: 700;
+    }
+
+    #Project .card {
+      border: none;
+      border-radius: 18px;
+      overflow: hidden;
+      background-color: white;
+      transition: 0.3s ease;
+    }
+
+    #Project .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(111, 66, 193, 0.18) !important;
+    }
+
+    #Project .card-img-top {
+      height: 230px;
+      object-fit: cover;
+    }
+
+    #Project .card-body {
+      padding: 25px;
+    }
+
+    #Project .card-title {
+      color: #5b2c91;
+      font-weight: 700;
+    }
+
+    #Project .card-text {
+      color: #666;
+      line-height: 1.7;
+    }
+
+    #Project .badge {
+      background-color: #7b4bc4 !important;
+      padding: 8px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+    }
+
+
+    /* =========================
+       WISHLIST
+    ========================= */
+
+    #wishlist {
+      background-color: white;
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    #wishlist h2 {
+      color: #5b2c91;
+      font-weight: 700;
+    }
+
+    #wishlist .card {
+      border: none;
+      border-radius: 18px;
+      overflow: hidden;
+      background-color: #f8f5ff;
+      transition: 0.3s ease;
+    }
+
+    #wishlist .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(111, 66, 193, 0.18) !important;
+    }
+
+    #wishlist .card-img-top {
+      height: 230px;
+      object-fit: cover;
+    }
+
+    #wishlist .card-body {
+      padding: 25px;
+    }
+
+    #wishlist .card-title {
+      color: #5b2c91;
+      font-weight: 700;
+    }
+
+    #wishlist .card-text {
+      color: #666;
+      line-height: 1.7;
+    }
+
+    #wishlist .badge {
+      background-color: #7b4bc4 !important;
+      padding: 8px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    #contact {
+      background: linear-gradient(
+        135deg,
+        #eee5ff,
+        #f8f5ff
+      );
+
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    #contact .card {
+      border: none;
+      border-radius: 22px;
+      box-shadow: 0 15px 40px rgba(111, 66, 193, 0.15);
+    }
+
+    #contact h2 {
+      color: #5b2c91;
+      font-weight: 700;
+    }
+
+    #contact .text-primary {
+      color: #6f42c1 !important;
+    }
+
+    #contact .form-label {
+      color: #4d356b;
+    }
+
+    #contact .form-control {
+      border: 1px solid #ddd0f2;
+      padding: 12px 15px;
+      transition: 0.3s;
+    }
+
+    #contact .form-control:focus {
+      border-color: #8e5de7;
+      box-shadow: 0 0 0 0.2rem rgba(111, 66, 193, 0.15);
+    }
+
+    #contact .form-control::placeholder {
+      color: #aaa;
+    }
+
+    #contact .btn-primary {
+      background: linear-gradient(
+        135deg,
+        #6f42c1,
+        #8e5de7
+      );
+
+      border: none;
+      padding: 13px;
+      transition: 0.3s;
+    }
+
+    #contact .btn-primary:hover {
+      background: linear-gradient(
+        135deg,
+        #5b2c91,
+        #7647c4
+      );
+
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(111, 66, 193, 0.25);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background-color: #5b2c91;
+      color: white;
+      padding: 25px 0;
+    }
+
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 768px) {
+
+      .jumbotron {
+        padding-top: 130px;
+      }
+
+      .jumbotron h1 {
+        font-size: 2rem;
+      }
+
+      #Project .card-img-top {
+        height: 200px;
+      }
+
+      #wishlist .card-img-top {
+        height: 200px;
+      }
+
+      .custom-navbar .nav-link {
+        margin-left: 0;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       NAVBAR
+  ========================= -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+
+    <div class="container">
+
+      <!-- Logo -->
+      <a class="navbar-brand" href="#home">
+        Dita
+      </a>
+
+      <!-- Tombol hamburger HP -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">
+              Home
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#about">
+              About
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#Project">
+              Project
+            </a>
+          </li>
+
+          <!-- WISHLIST -->
+          <li class="nav-item">
+            <a class="nav-link" href="#wishlist">
+              Wishlist
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">
+              Contact Me
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+
+  <!-- =========================
+       HOME
+  ========================= -->
+
+  <section id="home" class="jumbotron text-center">
+
+    <!-- Foto -->
+    <img
+      src="img/silvia.jpeg"
+      alt="Silvia"
+      width="200"
+      class="rounded-circle img-thumbnail"
+    >
+
+    <!-- Nama -->
+    <h1 class="display-4">
+      Silvia Andita Ramadhani
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="lead">
+      Coffee Lover | Home Cook
+    </p>
+
+  </section>
+
+
+
+  <!-- =========================
+       ABOUT
+  ========================= -->
+
+  <section id="about">
+
+    <div class="container">
+
+      <!-- Judul -->
+      <div class="row text-center mb-4">
+
+        <div class="col">
+
+          <p class="text-uppercase fw-bold text-primary">
+            — About Me
+          </p>
+
+          <h2>
+            About Me
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <!-- Isi About -->
+      <div class="row justify-content-center fs-5 text-center">
+
+        <div class="col-md-5 mb-4">
+
+          <p>
+            Halo, nama saya Dita. Saya adalah seorang pelajar
+            yang ramah, ceria, dan suka mencoba hal-hal baru.
+            Saya senang menghabiskan waktu bersama teman dan
+            keluarga. Di waktu luang, saya suka memasak dan
+            menikmati secangkir kopi karena kedua hal tersebut
+            membuat saya merasa santai dan nyaman.
+          </p>
+
+        </div>
+
+
+        <div class="col-md-5 mb-4">
+
+          <p>
+            Saya selalu berusaha menjadi pribadi yang lebih baik
+            dan terus belajar dari setiap pengalaman. Saya percaya
+            bahwa setiap usaha yang dilakukan dengan sungguh-sungguh
+            akan membawa hasil yang baik. Saya juga memiliki cita-cita
+            dan akan terus berusaha untuk mencapainya.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       PROJECT / HAL YANG DISUKAI
+  ========================= -->
+
+  <section id="Project">
+
+    <div class="container">
+
+      <!-- Judul -->
+      <div class="text-center mb-5">
+
+        <h2>
+          Hal yang Saya Suka
+        </h2>
+
+        <p>
+          Beberapa hal yang saya sukai dan sering saya lakukan
+          di waktu luang.
+        </p>
+
+      </div>
+
+
+      <!-- SEMUA CARD ADA DALAM 1 ROW -->
+      <div class="row g-4">
+
+
+        <!-- =====================
+             CARD KOPI
+        ====================== -->
+
+        <div class="col-md-4">
+
+          <div class="card h-100 shadow-sm">
+
+            <img
+              src="img/projects/kopi.jpeg"
+              class="card-img-top"
+              alt="Kopi"
+            >
+
+            <div class="card-body">
+
+              <span class="badge mb-2">
+                DRINK
+              </span>
+
+              <h4 class="card-title">
+                Kopi
+              </h4>
+
+              <p class="card-text">
+                Saya suka menikmati kopi, terutama saat sedang
+                bersantai atau mengerjakan sesuatu. Menikmati
+                secangkir kopi membuat suasana menjadi lebih
+                nyaman dan menyenangkan.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================
+             CARD MAKANAN
+        ====================== -->
+
+        <div class="col-md-4">
+
+          <div class="card h-100 shadow-sm">
+
+            <img
+              src="img/projects/makanan.jpeg"
+              class="card-img-top"
+              alt="Makanan"
+            >
+
+            <div class="card-body">
+
+              <span class="badge mb-2">
+                FOOD
+              </span>
+
+              <h4 class="card-title">
+                Makanan
+              </h4>
+
+              <p class="card-text">
+                Saya suka mencoba berbagai macam makanan.
+                Menikmati makanan yang enak menjadi salah satu
+                hal sederhana yang membuat saya senang,
+                terutama saat menikmatinya bersama orang-orang
+                terdekat.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================
+             CARD MEMASAK
+        ====================== -->
+
+        <div class="col-md-4">
+
+          <div class="card h-100 shadow-sm">
+
+            <img
+              src="img/projects/memasak.jpeg"
+              class="card-img-top"
+              alt="Memasak"
+            >
+
+            <div class="card-body">
+
+              <span class="badge mb-2">
+                COOKING
+              </span>
+
+              <h4 class="card-title">
+                Memasak
+              </h4>
+
+              <p class="card-text">
+                Saya juga suka memasak di waktu luang. Memasak
+                membuat saya bisa mencoba berbagai resep dan
+                berkreasi dengan bahan-bahan yang ada untuk
+                menghasilkan makanan yang lezat.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       WISHLIST
+  ========================= -->
+
+  <section id="wishlist">
+
+    <div class="container">
+
+      <!-- Judul -->
+      <div class="text-center mb-5">
+
+        <p class="text-uppercase fw-bold text-primary">
+          — My Wishlist
+        </p>
+
+        <h2>
+          Wishlist
+        </h2>
+
+        <p>
+          Beberapa hal yang ingin saya miliki,ukan,
+          dan capai di masa yang akan datang.
+        </p>
+
+      </div>
+
+
+      <!-- SEMUA CARD WISHLIST -->
+      <div class="row g-4">
+
+
+        <!-- =====================
+             WISHLIST 1
+        ====================== -->
+
+        <div class="col-md-4">
+
+          <div class="card h-100 shadow-sm">
+
+            <img
+              src="img/wishlist/ninja ss.jpeg"
+              class="card-img-top"
+              alt="Kreta Ninja ss"
+            >
+
+            <div class="card-body">
+
+              <span class="badge mb-2">
+                DREAM
+              </span>
+
+              <h4 class="card-title">
+                NINJA SS
+              </h4>
+
+              <p class="card-text">
+                Ninja SS adalah salah satu motor impian saya. Saya ingin suatu saat bisa memiliki Ninja SS sendiri dan merasakan sensasi berkendara dengan motor yang saya idamkan.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================
+             WISHLIST 2
+        ====================== -->
+
+        <div class="col-md-4">
+
+          <div class="card h-100 shadow-sm">
+
+            <img
+              src="img/wishlist/pajero.jpeg"
+              class="card-img-top"
+              alt="Mobil Pajero"
+            >
+
+            <div class="card-body">
+
+              <span class="badge mb-2">
+                DREAM
+              </span>
+
+              <h4 class="card-title">
+                PAJERO
+              </h4>
+
+              <p class="card-text">
+               Pajero adalah salah satu mobil impian saya. Saya ingin suatu saat bisa memiliki Pajero sendiri dan menggunakannya untuk bepergian bersama keluarga maupun orang-orang terdekat.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================
+             WISHLIST 3
+        ====================== -->
+
+        <div class="col-md-4">
+
+          <div class="card h-100 shadow-sm">
+
+            <img
+              src="img/wishlist/rx king.jpeg"
+              class="card-img-top"
+              alt="Kreta RX King"
+            >
+
+            <div class="card-body">
+
+              <span class="badge mb-2">
+                DREAM
+              </span>
+
+              <h4 class="card-title">
+               RX KING
+              </h4>
+
+              <p class="card-text">
+                RX King juga menjadi salah satu motor yang ingin saya miliki. Saya suka dengan desain dan karakter motornya, sehingga saya berharap suatu hari bisa punya RX King sendiri.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       CONTACT
+  ========================= -->
+
+  <section id="contact">
+
+    <div class="container">
+
+      <div class="row justify-content-center">
+
+        <div class="col-lg-7">
+
+          <!-- Card Contact -->
+          <div class="card">
+
+            <div class="card-body p-4 p-md-5">
+
+
+              <!-- Judul -->
+              <div class="text-center mb-4">
+
+                <p class="text-uppercase fw-bold text-primary mb-2">
+                  — Contact Me
+                </p>
+
+                <h2 class="mb-3">
+                  Hubungi Saya
+                </h2>
+
+                <p class="text-muted mb-0">
+                  Punya pertanyaan atau ingin menyampaikan
+                  sesuatu? Silakan kirim pesan melalui form
+                  di bawah ini.
+                </p>
+
+              </div>
+
+
+              <!-- FORM -->
+              <form>
+
+
+                <!-- Nama -->
+                <div class="mb-4">
+
+                  <label
+                    for="name"
+                    class="form-label fw-semibold"
+                  >
+                    Nama Lengkap
+                  </label>
+
+                  <input
+                    type="text"
+                    class="form-control form-control-lg rounded-3"
+                    id="name"
+                    placeholder="Masukkan nama kamu"
+                    required
+                  >
+
+                </div>
+
+
+                <!-- Email -->
+                <div class="mb-4">
+
+                  <label
+                    for="email"
+                    class="form-label fw-semibold"
+                  >
+                    Email
+                  </label>
+
+                  <input
+                    type="email"
+                    class="form-control form-control-lg rounded-3"
+                    id="email"
+                    placeholder="contoh@email.com"
+                    required
+                  >
+
+                </div>
+
+
+                <!-- Pesan -->
+                <div class="mb-4">
+
+                  <label
+                    for="pesan"
+                    class="form-label fw-semibold"
+                  >
+                    Pesan
+                  </label>
+
+                  <textarea
+                    class="form-control rounded-3"
+                    id="pesan"
+                    rows="5"
+                    placeholder="Tulis pesan kamu di sini..."
+                    required
+                  ></textarea>
+
+                </div>
+
+
+                <!-- Tombol -->
+                <div class="d-grid">
+
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-lg rounded-3 fw-semibold"
+                  >
+                    Kirim Pesan
+                  </button>
+
+                </div>
+
+
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer class="text-center">
+
+    <div class="container">
+
+      <p class="mb-0">
+        © 2026 Silvia Andita Ramadhani
+      </p>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+
+</body>
+</html>
